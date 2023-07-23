@@ -1,53 +1,53 @@
 """
-Kullanıcının girdiği vize1,vize2,final notlarına notlarına göre harf notunu hesaplayın.
+Calculate the letter grade according to the grades of the user's midterm1, midterm2, final grades.
 
-    Vize1 toplam notun %30'una etki edecek.
+     Midterm1 will affect 30% of the total grade.
 
-    Vize2 toplam notun %30'una etki edecek.
+     Midterm2 will affect 30% of the total grade.
 
-    Final toplam notun %40'ına etki edecek.
+     The final will affect 40% of the total grade.
 
 
-    Toplam Not >=  90 -----> AA
+     Total Grade >= 90 -----> AA
 
-    Toplam Not >=  85 -----> BA
+     Total Grade >= 85 -----> BA
 
-    Toplam Not >=  80 -----> BB
+     Total Grade >= 80 -----> BB
 
-    Toplam Not >=  75 -----> CB
+     Total Grade >= 75 -----> CB
 
-    Toplam Not >=  70 -----> CC
+     Total Grade >= 70 -----> CC
 
-    Toplam Not >=  65 -----> DC
+     Total Grade >= 65 -----> DC
 
-    Toplam Not >=  60 -----> DD
+     Total Grade >= 60 -----> DD
 
-    Toplam Not >=  55 -----> FD
+     Total Grade >= 55 -----> FD
 
-    Toplam Not <  55 -----> FF
+     Total Grade < 55 -----> FF
 """
 
-vize1 = float(input("Birinci vize notunuz:"))
-vize2 = float(input("İkinci vize notunuz:"))
-final = float(input("Final notunuz:"))
+midterm1 = float(input("Your first midterm grade:"))
+midterm2 = float(input("Your second midterm grade:"))
+final = float(input("Your final grade:"))
 
-toplam_not = (vize1 * 0.3) + (vize2 * 0.3) + (final * 0.4)
+total_grade = (midterm1 * 0.3) + (midterm2 * 0.3) + (final * 0.4)
 
-if(toplam_not >= 90):
+if(total_grade >= 90):
     print("AA")
-elif(toplam_not >= 85):
+elif(total_grade >= 85):
     print("BA")
-elif(toplam_not >= 80):
+elif(total_grade >= 80):
     print("BB")
-elif(toplam_not >= 75):
+elif(total_grade >= 75):
     print("CB")
-elif(toplam_not >= 70):
+elif(total_grade >= 70):
     print("CC")
-elif(toplam_not >= 65):
+elif(total_grade >= 65):
     print("DC")
-elif(toplam_not >= 60):
+elif(total_grade >= 60):
     print("DD")
-elif(toplam_not >= 55):
+elif(total_grade >= 55):
     print("FD")
-elif(toplam_not < 55):
+elif(total_grade < 55):
     print("FF")

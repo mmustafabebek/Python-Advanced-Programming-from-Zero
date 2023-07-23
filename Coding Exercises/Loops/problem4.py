@@ -1,17 +1,15 @@
 """
-Her bir while döngüsünde kullanıcıdan bir sayı alın ve kullanıcının girdiği sayıları "toplam" isimli bir değişkene ekleyin.
-Kullanıcı "q" tuşuna bastığı zaman döngüyü sonlandırın ve ekrana "toplam değişkenini" bastırın.
-
-*İpucu : while döngüsünü sonsuz koşulla başlatın ve kullanıcı q'ya basarsa döngüyü break ile sonlandırın.*
+In each while loop, take a number from the user and add the numbers entered by the user to a variable named "sum".
+When the user presses the "q" key, terminate the loop and print the "sum variable" to the screen.
 """
 
-toplam = 0
+total = 0
 
 while True:
-    sayi = input("Bir sayı giriniz:")
-    if(sayi == "q"):
+    number = input("Enter a number:")
+    if(number == "q"):
         break
-    sayi = int(sayi)
+    number = int(number)
 
-    toplam += sayi
-print("Girilen sayıların toplamı: ",toplam)
+    total += number
+print("Sum of entered numbers: ",total)

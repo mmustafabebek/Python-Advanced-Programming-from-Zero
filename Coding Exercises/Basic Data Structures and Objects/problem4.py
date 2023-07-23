@@ -1,9 +1,9 @@
-# Kullanıcıdan ad,soyad ve numara bilgisini alarak bunları alt alta ekrana yazdırın.
+# Get the name, surname and number information from the user and print them on the screen one after the other.
 
-ad = input("Adınızı giriniz:")
-soyad = input("Soyadınızı giriniz:")
-numara = input("Numaranızı giriniz:")
+name = input("Enter your name:")
+lastname = input("Enter your last name:")
+number = input("Enter your number:")
 
-bilgiler = [ad,soyad,numara]
+informations = [name,lastname,number]
 
-print("\nAdınız: {}\nSoyadınız: {}\nNumaranız: {}\n".format(bilgiler[0],bilgiler[1],bilgiler[2]))
+print("\nYour name: {}\nYour last name: {}\nYour number: {}\n".format(informations[0],informations[1],informations[2]))

@@ -1,20 +1,19 @@
 """
-1'den 1000'e kadar olan sayılardan mükemmel sayı olanları ekrana yazdırın. Bunun için bir sayının mükemmel olup olmadığını
-dönen bir tane fonksiyon yazın.
+Print perfect numbers from 1 to 1000 on the screen. For this, write a function that returns whether a number is perfect.
 
-Bir sayının bölenlerinin toplamı kendine eşitse bu sayı mükemmel bir sayıdır. Örnek olarak 6 mükemmel bir sayıdır
+A number is a perfect number if the sum of its divisors is equal to itself. For example, 6 is a perfect number.
 (1 + 2 + 3 = 6).
 """
 
-def mukemmel(sayi):
-    toplam = 0
-    for i in range(1,sayi):
-        if(sayi % i == 0):
-            toplam += i
+def perfect(number):
+    total = 0
+    for i in range(1,number):
+        if(number % i == 0):
+            total += i
         else:
             continue
-    if(toplam == sayi):
-        print(sayi)
+    if(total == number):
+        print(number)
 
 for x in range(1,1001):
-    mukemmel(x)
+    perfect(x)

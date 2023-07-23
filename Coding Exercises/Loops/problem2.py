@@ -1,26 +1,26 @@
 """
-Kullanıcıdan aldığınız bir sayının "Armstrong" sayısı olup olmadığını bulmaya çalışın.
+Try to find out if a number you received from the user is the "Armstrong" number.
 
-Örnek olarak, Bir sayı eğer 4 basamaklı ise ve oluşturan rakamlardan her birinin 4. kuvvetinin toplamı( 3 basamaklı sayılar için 3.kuvveti )
-o sayıya eşitse bu sayıya "Armstrong" sayısı denir.
+For example, if a number is 4 digits and it is the sum of the 4th power of each of its constituent digits (3rd power for 3 digit numbers)
+If it is equal to that number, this number is called the "Armstrong" number.
 
-Örnek olarak : 1634 = 1^4 + 6^4 + 3^4 + 4^4
+For example : 1634 = 1^4 + 6^4 + 3^4 + 4^4
 """
 
-sayi = input("Bir sayı giriniz:")
-basamak_sayisi = len(sayi)
-sayi = int(sayi)
-basamak = 0
-toplam = 0
+number = input("Enter a number:")
+number_digits = len(number)
+number = int(number)
+step = 0
+total = 0
 
-gecici_sayi = sayi
+temp_number = number
 
-while(gecici_sayi > 0):
-    basamak = gecici_sayi % 10
-    toplam += basamak ** basamak_sayisi
-    gecici_sayi //= 10
+while(temp_number > 0):
+    step = temp_number % 10
+    total += step ** number_digits
+    temp_number //= 10
 
-if(toplam == sayi):
-    print("Bu sayı bir Armstrong sayısıdır.")
+if(total == number):
+    print("This number is an Armstrong number.")
 else:
-    print("Bu sayı bir Armstrong sayısı değildir.")
+    print("This number is not an Armstrong number.")

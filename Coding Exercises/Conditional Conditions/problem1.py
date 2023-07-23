@@ -1,31 +1,32 @@
 """
-Kullanıcıdan alınan boy ve kilo değerlerine göre beden kitle indeksini hesaplayın ve şu kurallara göre ekrana şu yazıları yazdırın.
+Calculate the body mass index according to the height and weight values obtained from the user and print the following
+texts on the screen according to these rules.
 
- Beden Kitle İndeksi: Kilo / Boy(m) *  Boy(m)
+ Body Mass Index: Weight / Height(m) * Height(m)
 
- BKİ 18.5'un altındaysa -------> Zayıf
+  If BMI is below 18.5 -------> Poor
 
- BKİ 18.5 ile 25 arasındaysa ------> Normal
+  If BMI is between 18.5 and 25 ------> Normal
 
- BKİ 25 ile 30 arasındaysa --------> Fazla Kilolu
+  If BMI is between 25 and 30 --------> Overweight
 
- BKİ 30'un üstündeyse -------------> Obez
+  If BMI is over 30 -------------> Obese
 """
 
 print("""**************************************************
-Beden Kitle Endeksi Hesaplayıcı
+Body Mass Index Calculator
 **************************************************""")
 
-boy = float(input("Boyunuz:"))
-kilo = float(input("Kilonuz:"))
+height = float(input("Your height:"))
+weight = float(input("Your weight:"))
 
-beden_kitle_indeksi = kilo / (boy * boy)
+body_mass_index = weight / (height * height)
 
-if (beden_kitle_indeksi < 18.5):
-    print("Zayıf")
-elif (18.5 <= beden_kitle_indeksi and beden_kitle_indeksi < 25):
+if (body_mass_index < 18.5):
+    print("Weak")
+elif (18.5 <= body_mass_index and body_mass_index < 25):
     print("Normal")
-elif (25 <= beden_kitle_indeksi and beden_kitle_indeksi < 30):
-    print("Fazla Kilolu")
-elif (beden_kitle_indeksi > 30):
-    print("Obez")
+elif (25 <= body_mass_index and body_mass_index < 30):
+    print("Overweight")
+elif (body_mass_index > 30):
+    print("Obese")

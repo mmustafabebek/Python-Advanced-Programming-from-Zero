@@ -1,39 +1,35 @@
 """
-Şimdi de geometrik şekil hesaplama işlemi yapalım. İlk olarak kullanıcıdan üçgenin mi dörtgenin mi tipini bulmak istediğini sorun.
+Now let's do the geometric figure calculation. First, ask the user whether they want to find the type of triangle or rectangle.
 
-Eğer kullanıcı "Dörtgen" cevabını verirse , 4 tane kenar isteyip bu dörtgenin kare mi , dikdörtgen mi yoksa sıradan bir dörtgen mi olduğunu bulmaya çalışın.
+If the user answers "Rectangle", ask for 4 sides and try to find out if this rectangle is a square, rectangle, or an ordinary rectangle.
 
-Eğer kullanıcı "Üçgen" cevabını verirse , 3 tane kenar isteyip bu üçgenin ikizkenar mı , eşkenar mı yoksa sıradan bir üçgen mi olduğunu bulmaya çalışın.
-Eğer verilen kenarlar bir üçgen belirtmiyorsa, ekrana "Üçgen belirtmiyor" şeklinde bir yazı yazın.o
-
-Üçgen belirtme şartını bilmiyorsunuz internetten bakabilirsiniz.
-
-Ayrıca , bu problemde mutlak değer bulmaya ihtiyacınız olacak. Bunun için, Pythonda hazır bir fonksiyon olan abs() fonksiyonunu kullanabilirsiniz.
+If the user answers "Triangle", ask for 3 sides and try to find out if this triangle is isosceles, equilateral or an ordinary triangle.
+If the given sides do not indicate a triangle, write "Does not indicate a triangle" on the screen.
 """
 
-sayi = input("Tipini bulmak istediğiniz çokgeni seçiniz.\n1.Üçgen\n2.Dörtgen\n")
+number = input("Select the polygon whose type you want to find:\n1.Triangle\n2.Quadrilateral\n")
 
-if(sayi == "1"):
-    a = float(input("Birinci kenarı giriniz:"))
-    b = float(input("İkinci kenarı giriniz:"))
-    c = float(input("Üçüncü kenarı giriniz:"))
+if(number == "1"):
+    a = float(input("Enter the first side:"))
+    b = float(input("Enter the second side:"))
+    c = float(input("Enter the third side:"))
     if(abs(a + b) > c and abs(a + c) > b and abs(b + c) > a):
         if (a == b and b == c):
-            print("Bu üçgen eşkenardır.")
+            print("This triangle is equilateral.")
         elif((a == b and a != c) or (a == c and a != b) or (b == c and b != a)):
-            print("Bu üçgen ikizkenardır.")
+            print("This triangle is isosceles.")
         else:
-            print("Bu üçgen çeşitkenardır.")
+            print("This triangle is scalene.")
     else:
-        print("Üçgen belirtmiyor.")
-elif(sayi == "2"):
-    a = float(input("Birinci kenarı giriniz:"))
-    b = float(input("İkinci kenarı giriniz:"))
-    c = float(input("Üçüncü kenarı giriniz:"))
-    d = float(input("Dördüncü kenarı giriniz:"))
+        print("It doesn't specify a triangle.")
+elif(number == "2"):
+    a = float(input("Enter the first side:"))
+    b = float(input("Enter the second side:"))
+    c = float(input("Enter the third side:"))
+    d = float(input("Enter the fourth side:"))
     if(a == b and b == c and c == d):
-        print("Bu dörtgen karedir.")
+        print("This quadrilateral is square.")
     elif((a == b and c == d) or (a == c and b == d) or (a == d and b == c)):
-        print("Bu dörtgen dikdörtgendir.")
+        print("This quadrilateral is a rectangle.")
     else:
-        print("Bu dörtgen sıradan bir dörtgendir.")
+        print("This quadrilateral is an ordinary quadrilateral.")

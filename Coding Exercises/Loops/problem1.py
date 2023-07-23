@@ -1,20 +1,21 @@
 """
-Kullanıcıdan aldığınız bir sayının mükemmel olup olmadığını bulmaya çalışın.
+Try to find out if a number you get from the user is perfect.
 
-Bir sayının kendi hariç bölenlerinin toplamı kendine eşitse bu sayıya "mükemmel sayı" denir. Örnek olarak, 6 mükemmel bir sayıdır. (1 + 2 + 3 = 6)
+A number is called a "perfect number" if the sum of its divisors is equal to itself.
+For example, 6 is a perfect number. (1 + 2 + 3 = 6)
 """
 
-sayi = int(input("Bir sayı giriniz:"))
-bolen = 0
+number = int(input("Enter a number:"))
+dividing = 0
 
-for i in range(1,sayi):
-    if(sayi % i == 0):
-        bolen += i
+for i in range(1,number):
+    if(number % i == 0):
+        dividing += i
     else:
         continue
 
-if(bolen == sayi):
-    print("Bu sayı bir mükemmel sayıdır.")
+if(dividing == number):
+    print("This number is a perfect number.")
 else:
-    print("Bu sayı bir mükemmel sayı değildir.")
+    print("This number is not a perfect number.")
 

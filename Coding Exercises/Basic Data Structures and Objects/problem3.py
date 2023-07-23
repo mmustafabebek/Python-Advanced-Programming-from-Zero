@@ -1,9 +1,9 @@
 """
-Bir aracın kilometrede ne kadar yaktığı ve kaç kilometre yol yaptığı bilgilerini alın ve sürücünü toplam ne kadar ödemesini
-gerektiğini hesaplayın.
+Get information about how much a vehicle has burned per kilometer and how many kilometers it has traveled, and calculate
+how much the driver must pay in total.
 """
 
-kmbasinayakma = float(input("Aracın kilometrede yaktığı miktar:"))
-kmyol = int(input("Aracın km olarak yaptığı yol:"))
+burningperkm = float(input("The amount the vehicle burns per kilometer:"))
+kmroad = int(input("The distance traveled by the vehicle in km:"))
 
-print("Tutar: {} tl".format(kmbasinayakma * kmyol))
+print("Amount: {} tl".format(burningperkm * kmroad))

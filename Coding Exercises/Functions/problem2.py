@@ -1,17 +1,17 @@
 """
-Kullanıcıdan 2 tane sayı alarak bu sayıların en büyük ortak bölenini (EBOB) dönen bir tane fonksiyon yazın.
+Write a function that takes 2 numbers from the user and returns the greatest common divisor (EBOB) of these numbers.
 """
 
-def ebob_bulma(sayi1,sayi2):
+def find_ebob(number1,number2):
     i = 1
     ebob = 1
-    while(i <= sayi1 and i <= sayi2):
-        if(not(sayi1 % i) and not(sayi2 % i)):
+    while(i <= number1 and i <= number2):
+        if(not(number1 % i) and not(number2 % i)):
             ebob = i
         i += 1
     return ebob
 
-sayi1 = int(input("Sayı1 :"))
-sayi2 = int(input("Sayı2 :"))
+number1 = int(input("Number1 :"))
+number2 = int(input("Number2 :"))
 
-print("EBOB :",ebob_bulma(sayi1,sayi2))
+print("EBOB :",find_ebob(number1,number2))

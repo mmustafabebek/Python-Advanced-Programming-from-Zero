@@ -1,34 +1,34 @@
 """
-Kullanıcıdan 2 tane sayı alarak bu sayıların en küçük ortak katlarını (EKOK) dönen bir tane fonksiyon yazın.
+Write a function that takes 2 numbers from the user and returns the least common multiple of these numbers.
 """
 
-def ekok_bulma(sayi1,sayi2):
+def find_ekok(number1,number2):
     i = 2
     ekok = 1
 
     while True:
-        if(sayi1 % i == 0 and sayi2 % i == 0):
+        if(number1 % i == 0 and number2 % i == 0):
             ekok *= i
 
-            sayi1 //= i
-            sayi2 //= i
+            number1 //= i
+            number2 //= i
 
-        elif(sayi1 % i == 0 and sayi2 % i != 0):
+        elif(number1 % i == 0 and number2 % i != 0):
             ekok *= i
 
-            sayi1 //= i
-        elif(sayi1 % i != 0 and sayi2 % i == 0):
+            number1 //= i
+        elif(number1 % i != 0 and number2 % i == 0):
             ekok *= i
 
-            sayi2 //= i
+            number2 //= i
         else:
             i += 1
 
-        if(sayi1 == 1 and sayi2 == 1):
+        if(number1 == 1 and number2 == 1):
             break
     return ekok
 
-sayi1 = int(input("Sayı1 :"))
-sayi2 = int(input("Sayı2 :"))
+number1 = int(input("Number1 :"))
+number2 = int(input("Number2 :"))
 
-print("EKOK :",ekok_bulma(sayi1,sayi2))
+print("EKOK :",find_ekok(number1,number2))

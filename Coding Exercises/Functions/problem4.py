@@ -1,17 +1,17 @@
 """
-Kullanıcıdan 2 basamaklı bir sayı alın ve bu sayının okunuşunu bulan bir fonksiyon yazın.
+Take a 2-digit number from the user and write a function that finds the pronunciation of that number.
 
-Örnek: 97 ---------> Doksan Yedi
+Example: 97 ---------> Ninety Seven
 """
 
-birler = ["","Bir","İki","Üç","Dört","Beş","Altı","Yedi","Sekiz","Dokuz"]
-onlar = ["","On","Yirmi","Otuz","Kırk","Elli","Altmış","Yetmiş","Seksen","Doksan"]
-def okunus(sayi):
-    birinci = sayi % 10
-    ikinci = sayi // 10
+ones = ["","One","Two","Three","Four","Five","Six","Seven","Eight","Nine"]
+them = ["","Ten","Twenty","Thirty","Fourty","Fifty","Sixty","Seventy","Eighty","Ninety"]
+def pronunciation(number):
+    first = number % 10
+    second = number // 10
 
-    return onlar[ikinci] + " " + birler[birinci]
+    return them[second] + " " + ones[first]
 
-sayi = int(input("İki basamaklı bir sayı giriniz:"))
+number = int(input("Enter a two digit number:"))
 
-print(okunus(sayi))
+print(pronunciation(number))

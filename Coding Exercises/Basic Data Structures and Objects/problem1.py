@@ -1,9 +1,9 @@
-# Kullanıcıdan aldığınız 3 tane sayıyı çarparak ekrana yazdırın. Ekrana yazdırma işlemini *format* metoduyla yapmaya çalışın.
+# Multiply the 3 numbers you receive from the user and print them on the screen. Try to print to the screen with the *format* method.
 
-a = int(input("Birinci sayi:"))
-b = int(input("Ikinci sayi:"))
-c = int(input("Ucuncu sayi:"))
+a = int(input("First Number:"))
+b = int(input("Second Number:"))
+c = int(input("Third Number:"))
 
-carpim = a * b * c
+multiplication = a * b * c
 
-print("Birinci sayi: {}\nIkinci sayi: {}\nUcuncu sayi: {}\nSayilarin carpimi: {}".format(a,b,c,carpim))
+print("First Number: {}\nSecond Number: {}\nThird Number: {}\nMultiplication of Numbers: {}".format(a,b,c,multiplication))

@@ -1,7 +1,7 @@
-# Kullanıcıdan aldığınız boy ve kilo değerlerine göre kullanıcının beden kitle indeksini bulun.
-# Beden Kitle İndeksi : Kilo / Boy(m) Boy(m)
+# Find the user's body mass index based on the height and weight values you get from the user.
+# Body Mass Index: Weight / Height(m) Height(m)
 
-boy = float(input("Boy bilginizi giriniz:"))
-kilo = int(input("Kilo bilginizi giriniz:"))
+height = float(input("Enter your height information:"))
+weight = int(input("Enter your weight information:"))
 
-bedenkitleindeksi = input("Beden Kitle İndeksiniz: {}\n".format(kilo / boy ** 2))
+bodymassindex = input("Your Body Mass Index: {}\n".format(weight / height ** 2))

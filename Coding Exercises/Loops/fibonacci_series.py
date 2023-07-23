@@ -1,5 +1,5 @@
 """
-Fibonaci Serisi yeni bir sayıyı önceki iki sayının toplamı şeklinde oluşturur.
+The Fibonaci Series creates a new number as the sum of the previous two numbers.
 
 1,1,2,3,5,8,13,21,34,...............
 """

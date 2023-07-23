@@ -1,10 +1,10 @@
-# Kullanıcıdan iki tane sayı isteyin ve bu sayıların değerlerini birbirleriyle değiştirin.
+# Ask the user for two numbers and exchange their values with each other.
 
-a = float(input("Birinci sayıyı giriniz:"))
-b = float(input("İkinci sayıyı giriniz:"))
+a = float(input("Enter the first number:"))
+b = float(input("Enter the second number:"))
 
-print("Değiştirilmeden Önce Değerler\na: {}\nb: {}\n".format(a,b))
+print("Values Before Changing\na: {}\nb: {}\n".format(a,b))
 
 a,b = b,a
 
-print("Değiştirildikten Sonra Değerler\na: {}\nb: {}\n".format(a,b))
+print("Values After Changed\na: {}\nb: {}\n".format(a,b))
