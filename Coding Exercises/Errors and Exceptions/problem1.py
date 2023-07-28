@@ -8,9 +8,9 @@ Print the strings in this list that contain only numbers to the screen. Remember
 
 list1 = ["345","sadas","324a","14","kemal"]
 
-for i in list1:
+for element in list1:
     try:
-        print(int(i))
-    except ValueError:
-        print("{} is not just data with numbers.".format(i))
+        print(int(element))
+    except:
+        pass
 print("Program terminated.")
