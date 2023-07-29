@@ -14,9 +14,9 @@ with open("football_players.txt","r",encoding="utf-8") as file:
         line = line[:-1]
         line_elements = line.split(",")
 
-        if(line_elements[1] == "Galatasaray"):
+        if line_elements[1] == "Galatasaray":
             gs.append(line + "\n")
-        elif(line_elements[1] == "Beşiktaş"):
+        elif line_elements[1] == "Beşiktaş":
             bjk.append(line + "\n")
         else:
             fb.append(line + "\n")
